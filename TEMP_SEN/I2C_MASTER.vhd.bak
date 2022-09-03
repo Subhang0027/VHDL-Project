@@ -1,0 +1,134 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY I2C_MASTER is
+port (
+clk : IN STD_LOGIC;
+rst : IN STD_LOGIC;
+STROBE : IN STD_LOGIC;
+SDA : INOUT STD_LOGIC;
+ENABLE : OUT STD_LOGIC;
+data_bus : out std_logic_vector(15 downto 0));
+END I2C_MASTER;
+
+ARCHITECTURE BEHAVE of I2C_MASTER is
+type I2C is (Idle,START,address,S_ACK,Ack_error,MSB,M_ACK,LSB,N_ACK,STOP);
+signal state      : I2c;
+signal SDA_out    : std_logic;
+signal SDA_in     : std_logic;
+signal scl_en     : std_logic := '0';
+signal ack_err    : std_logic;
+signal bit_cnt    : integer range 0 to 7  := 7;
+signal data_cnt   : integer range 0 to 16 := 16;
+signal addr       : STD_LOGIC_VECTOR(6 DOWNTO 0):= "1001000";
+signal addr_rw    : std_logic_vector(7 downto 0);
+signal temp       : std_logic_vector (15 downto 0);
+
+BEGIN
+  PROCESS(clk, rst)
+  BEGIN
+    IF(rst = '0') THEN                 
+      state <= idle;
+      scl_en	<= '1';	
+      sda_out <= '1';                     
+      bit_cnt <= 7;
+		data_cnt <= 16;
+		addr_rw <= "10010000";
+		temp <= "0000000000000000";
+		
+	elsif(clk'event and clk = '1') then
+	case state is 
+	
+	when idle =>
+	state <= idle;
+      scl_en	<= '1';	
+      sda_out <= '1';                     
+      bit_cnt <= 7;
+		data_cnt <= 16;
+		addr_rw <= "10010000";
+		temp <= "0000000000000000";
+	if(strobe = '0') then 
+		state <= start;
+	else
+		state <= idle;
+	end if;
+	
+	when start =>
+	scl_en	<= '0';
+		sda_out <= '0' ;
+		state <= address;
+	
+	when address =>
+	
+		sda_out <= addr_rw(bit_cnt);
+		bit_cnt <= bit_cnt-1;
+		if (bit_cnt = 0) then 
+		state <= S_ACK;
+	else
+		state <= address;
+	end if;
+	
+	when S_ACK =>
+		sda_out <='1';
+	 if sda = '0' then 
+			state <= MSB;
+	 else
+	 ack_err <= '1';
+	 state <= Ack_error;
+	 end if;
+	 
+	 when ACK_error =>
+	  if sda = '1' then 
+	    state <= ACK_error;
+	 end if;
+	 
+	 when MSB =>
+				sda_out  <= '1';
+				data_cnt <= data_cnt-1;
+				temp(data_cnt)<=sda_in;
+		if data_cnt = 7 then
+		   data_bus <= temp;
+			state <= M_ACK;
+	  else 
+			state <= MSB;
+	  end if;
+	 
+	 when M_ACK =>
+	 sda_out <= '0';
+	 state <= LSB;
+	 
+	 
+	 when LSB =>
+				sda_out <= '1';
+	 if data_cnt = 0 then
+			state <= N_ACK ;
+	else
+		temp(data_cnt)<= sda_in;
+		data_cnt <= data_cnt-1;
+		state <= LSB;
+	end if;
+	
+	when N_ACK =>
+	sda_out <= '1';
+	state <= stop;
+	
+	when stop =>
+	sda_out <= '0';
+	
+	state <= idle;
+	
+	when others => 
+		state <= idle;
+	end case;
+
+	
+
+end if;
+end process;
+
+SDA_in <= SDA;
+enable <='0' when (scl_en='1')else'1';
+SDA <= 'Z' WHEN sda_out = '1' ELSE '0';
+end behave;
+	 

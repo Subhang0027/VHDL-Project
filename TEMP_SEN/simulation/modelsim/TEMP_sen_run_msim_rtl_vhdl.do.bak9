@@ -1,0 +1,15 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/intelFPGA_lite/18.1/TEMP_SEN/TEMP_sen.vhd}
+vcom -93 -work work {C:/intelFPGA_lite/18.1/TEMP_SEN/I2C_MASTER.vhd}
+vcom -93 -work work {C:/intelFPGA_lite/18.1/TEMP_SEN/temp_reg.vhd}
+vcom -93 -work work {C:/intelFPGA_lite/18.1/TEMP_SEN/LCD_module.vhd}
+vcom -93 -work work {C:/intelFPGA_lite/18.1/TEMP_SEN/ex_scl.vhd}
+vcom -93 -work work {C:/intelFPGA_lite/18.1/TEMP_SEN/clock_divider.vhd}
+vcom -93 -work work {C:/intelFPGA_lite/18.1/TEMP_SEN/bin8bcd.vhd}
+

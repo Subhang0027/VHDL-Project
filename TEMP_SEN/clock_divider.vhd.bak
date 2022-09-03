@@ -1,0 +1,32 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity clock_divider is
+port(
+ clk_50,reset : in std_logic;
+ clk_out    : out std_logic_vector(9 downto 0);
+ sclk_64,sclk_128,sample_clock : out std_logic
+ );
+ end clock_divider;
+ 
+Architecture rtl of clock_divider is
+signal timer : 	std_logic_vector(9 downto 0) := "0000000000";
+begin
+
+	process(clk_50,reset)
+ begin
+ if (reset='0')then
+ timer <= "0000000000";
+elsif clk_50'event and clk_50='1' then 
+timer <= timer + 1;
+end if;
+end process;
+
+clk_out <= timer;
+sample_clock <= timer(1);
+sclk_64 <= timer(5);
+sclk_128 <= timer(6);
+
+end rtl;
+	 

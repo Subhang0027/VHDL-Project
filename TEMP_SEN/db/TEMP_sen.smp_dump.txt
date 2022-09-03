@@ -1,0 +1,58 @@
+
+State Machine - |TEMP_sen|LCD_MODULE:inst1|next_command
+Name next_command.hold next_command.drop_LCD_E next_command.return_home next_command.write_C next_command.write_degree next_command.write_LSB next_command.write_dot next_command.write_MSB_3 next_command.write_MSB_2 next_command.write_MSB_1 next_command.write_equal next_command.write_P next_command.write_M next_command.write_E next_command.write_T next_command.mode_set next_command.dis_clear next_command.dis_on next_command.fun_set next_command.idle 
+next_command.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+next_command.fun_set 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+next_command.dis_on 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+next_command.dis_clear 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+next_command.mode_set 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+next_command.write_T 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+next_command.write_E 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+next_command.write_M 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+next_command.write_P 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+next_command.write_equal 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+next_command.write_MSB_1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+next_command.write_MSB_2 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+next_command.write_MSB_3 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+next_command.write_dot 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+next_command.write_LSB 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+next_command.write_degree 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+next_command.write_C 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+next_command.return_home 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+next_command.drop_LCD_E 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+next_command.hold 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |TEMP_sen|LCD_MODULE:inst1|state
+Name state.hold state.drop_LCD_E state.return_home state.write_C state.write_degree state.write_LSB state.write_dot state.write_MSB_3 state.write_MSB_2 state.write_MSB_1 state.write_equal state.write_P state.write_M state.write_E state.write_T state.mode_set state.dis_clear state.dis_on state.fun_set state.idle 
+state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.fun_set 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.dis_on 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.dis_clear 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.mode_set 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.write_T 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.write_E 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.write_M 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.write_P 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.write_equal 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.write_MSB_1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.write_MSB_2 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.write_MSB_3 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.write_dot 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.write_LSB 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.write_degree 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.write_C 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.return_home 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.drop_LCD_E 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.hold 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |TEMP_sen|I2C_MASTER:inst|state
+Name state.STOP state.N_ACK state.LSB state.M_ACK state.MSB state.S_ACK state.ADDRESS state.START state.Idle 
+state.Idle 0 0 0 0 0 0 0 0 0 
+state.START 0 0 0 0 0 0 0 1 1 
+state.ADDRESS 0 0 0 0 0 0 1 0 1 
+state.S_ACK 0 0 0 0 0 1 0 0 1 
+state.MSB 0 0 0 0 1 0 0 0 1 
+state.M_ACK 0 0 0 1 0 0 0 0 1 
+state.LSB 0 0 1 0 0 0 0 0 1 
+state.N_ACK 0 1 0 0 0 0 0 0 1 
+state.STOP 1 0 0 0 0 0 0 0 1 

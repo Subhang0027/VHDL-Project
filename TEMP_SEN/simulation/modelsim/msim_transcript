@@ -1,0 +1,709 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do TEMP_sen_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/TEMP_SEN/TEMP_sen.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:30:03 on May 11,2022
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/TEMP_sen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TEMP_sen
+# -- Compiling architecture bdf_type of TEMP_sen
+# End time: 13:30:03 on May 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/TEMP_SEN/I2C_MASTER.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:30:03 on May 11,2022
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/I2C_MASTER.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity I2C_Master
+# -- Compiling architecture BEHAVE of I2C_Master
+# End time: 13:30:03 on May 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/TEMP_SEN/temp_reg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:30:03 on May 11,2022
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/temp_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity temp_REG
+# -- Compiling architecture behave of Temp_reg
+# End time: 13:30:03 on May 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/TEMP_SEN/LCD_module.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:30:03 on May 11,2022
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/LCD_module.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity LCD_MODULE
+# -- Compiling architecture behave of LCD_MODULE
+# End time: 13:30:03 on May 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/TEMP_SEN/ex_scl.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:30:03 on May 11,2022
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/ex_scl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ex_SCL
+# -- Compiling architecture Behavioral of ex_SCL
+# End time: 13:30:03 on May 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/TEMP_SEN/clock_divider.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:30:03 on May 11,2022
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/clock_divider.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity clock_divider
+# -- Compiling architecture rtl of clock_divider
+# End time: 13:30:03 on May 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/TEMP_SEN/bin8bcd.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:30:03 on May 11,2022
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/bin8bcd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin8bcd
+# -- Compiling architecture struct of bin8bcd
+# End time: 13:30:04 on May 11,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim/TEMP_sen.vht
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:33:46 on May 11,2022
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim/TEMP_sen.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TEMP_sen_vhd_tst
+# -- Compiling architecture TEMP_sen_arch of TEMP_sen_vhd_tst
+# End time: 13:33:46 on May 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript work.temp_sen_vhd_tst -t ns
+# vsim -gui -l msim_transcript work.temp_sen_vhd_tst -t ns 
+# Start time: 13:33:56 on May 11,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.temp_sen_vhd_tst(temp_sen_arch)
+# Loading work.temp_sen(bdf_type)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.i2c_master(behave)
+# Loading work.lcd_module(behave)
+# Loading ieee.numeric_std(body)
+# Loading work.bin8bcd(struct)
+# Loading work.clock_divider(rtl)
+# Loading work.ex_scl(behavioral)
+# Loading work.temp_reg(behave)
+add wave -position insertpoint  \
+sim:/temp_sen_vhd_tst/clk_50 \
+sim:/temp_sen_vhd_tst/LCD_BLON \
+sim:/temp_sen_vhd_tst/LCD_DATA \
+sim:/temp_sen_vhd_tst/LCD_E \
+sim:/temp_sen_vhd_tst/LCD_ON \
+sim:/temp_sen_vhd_tst/LCD_RS \
+sim:/temp_sen_vhd_tst/LCD_RW \
+sim:/temp_sen_vhd_tst/reset \
+sim:/temp_sen_vhd_tst/sample_clock \
+sim:/temp_sen_vhd_tst/SCL \
+sim:/temp_sen_vhd_tst/SDA
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim/TEMP_sen.vht
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:36:10 on May 11,2022
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim/TEMP_sen.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TEMP_sen_vhd_tst
+# -- Compiling architecture TEMP_sen_arch of TEMP_sen_vhd_tst
+# End time: 13:36:11 on May 11,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart
+# Loading work.temp_sen_vhd_tst(temp_sen_arch)
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim/TEMP_sen.vht
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:57:14 on May 11,2022
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim/TEMP_sen.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TEMP_sen_vhd_tst
+# -- Compiling architecture TEMP_sen_arch of TEMP_sen_vhd_tst
+# End time: 13:57:14 on May 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/TEMP_sen.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:57:28 on May 11,2022
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/TEMP_sen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TEMP_sen
+# -- Compiling architecture bdf_type of TEMP_sen
+# End time: 13:57:28 on May 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript -t ns work.temp_sen_vhd_tst
+# End time: 13:57:38 on May 11,2022, Elapsed time: 0:23:42
+# Errors: 0, Warnings: 0
+# vsim -gui -l msim_transcript -t ns work.temp_sen_vhd_tst 
+# Start time: 13:57:38 on May 11,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.temp_sen_vhd_tst(temp_sen_arch)
+# Loading work.temp_sen(bdf_type)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.i2c_master(behave)
+# Loading work.lcd_module(behave)
+# Loading ieee.numeric_std(body)
+# Loading work.bin8bcd(struct)
+# Loading work.clock_divider(rtl)
+# Loading work.ex_scl(behavioral)
+# Loading work.temp_reg(behave)
+add wave -position insertpoint  \
+sim:/temp_sen_vhd_tst/clk_50 \
+sim:/temp_sen_vhd_tst/LCD_BLON \
+sim:/temp_sen_vhd_tst/LCD_DATA \
+sim:/temp_sen_vhd_tst/LCD_E \
+sim:/temp_sen_vhd_tst/LCD_ON \
+sim:/temp_sen_vhd_tst/LCD_RS \
+sim:/temp_sen_vhd_tst/LCD_RW \
+sim:/temp_sen_vhd_tst/reset \
+sim:/temp_sen_vhd_tst/sample_clock \
+sim:/temp_sen_vhd_tst/SCL \
+sim:/temp_sen_vhd_tst/SDA
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/TEMP_sen.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:49:31 on May 11,2022
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/TEMP_sen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TEMP_sen
+# -- Compiling architecture bdf_type of TEMP_sen
+# End time: 14:49:31 on May 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim/TEMP_sen.vht
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:49:51 on May 11,2022
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim/TEMP_sen.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TEMP_sen_vhd_tst
+# -- Compiling architecture TEMP_sen_arch of TEMP_sen_vhd_tst
+# End time: 14:49:51 on May 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript -t ns work.temp_sen_vhd_tst
+# End time: 14:50:02 on May 11,2022, Elapsed time: 0:52:24
+# Errors: 0, Warnings: 0
+# vsim -gui -l msim_transcript -t ns work.temp_sen_vhd_tst 
+# Start time: 14:50:02 on May 11,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.temp_sen_vhd_tst(temp_sen_arch)
+# Loading work.temp_sen(bdf_type)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.i2c_master(behave)
+# Loading work.lcd_module(behave)
+# Loading ieee.numeric_std(body)
+# Loading work.bin8bcd(struct)
+# Loading work.clock_divider(rtl)
+# Loading work.ex_scl(behavioral)
+# Loading work.temp_reg(behave)
+add wave -position insertpoint  \
+sim:/temp_sen_vhd_tst/clk_50 \
+sim:/temp_sen_vhd_tst/LCD_BLON \
+sim:/temp_sen_vhd_tst/LCD_DATA \
+sim:/temp_sen_vhd_tst/LCD_E \
+sim:/temp_sen_vhd_tst/LCD_ON \
+sim:/temp_sen_vhd_tst/LCD_RS \
+sim:/temp_sen_vhd_tst/LCD_RW \
+sim:/temp_sen_vhd_tst/reset \
+sim:/temp_sen_vhd_tst/sample_clock \
+sim:/temp_sen_vhd_tst/SCL \
+sim:/temp_sen_vhd_tst/SDA
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim/TEMP_sen.vht
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:56:28 on May 11,2022
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim/TEMP_sen.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TEMP_sen_vhd_tst
+# -- Compiling architecture TEMP_sen_arch of TEMP_sen_vhd_tst
+# End time: 14:56:28 on May 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.temp_sen_vhd_tst(temp_sen_arch)
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim/TEMP_sen.vht
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:05:08 on May 11,2022
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim/TEMP_sen.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TEMP_sen_vhd_tst
+# -- Compiling architecture TEMP_sen_arch of TEMP_sen_vhd_tst
+# End time: 15:05:08 on May 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript -t ns work.temp_sen_vhd_tst
+# End time: 15:05:18 on May 11,2022, Elapsed time: 0:15:16
+# Errors: 0, Warnings: 0
+# vsim -gui -l msim_transcript -t ns work.temp_sen_vhd_tst 
+# Start time: 15:05:18 on May 11,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.temp_sen_vhd_tst(temp_sen_arch)
+# Loading work.temp_sen(bdf_type)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.i2c_master(behave)
+# Loading work.lcd_module(behave)
+# Loading ieee.numeric_std(body)
+# Loading work.bin8bcd(struct)
+# Loading work.clock_divider(rtl)
+# Loading work.ex_scl(behavioral)
+# Loading work.temp_reg(behave)
+add wave -position insertpoint  \
+sim:/temp_sen_vhd_tst/clk_50 \
+sim:/temp_sen_vhd_tst/LCD_BLON \
+sim:/temp_sen_vhd_tst/LCD_DATA \
+sim:/temp_sen_vhd_tst/LCD_E \
+sim:/temp_sen_vhd_tst/LCD_ON \
+sim:/temp_sen_vhd_tst/LCD_RS \
+sim:/temp_sen_vhd_tst/LCD_RW \
+sim:/temp_sen_vhd_tst/reset \
+sim:/temp_sen_vhd_tst/sample_clock \
+sim:/temp_sen_vhd_tst/SCL \
+sim:/temp_sen_vhd_tst/SDA
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim/TEMP_sen.vht
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:06:16 on May 11,2022
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim/TEMP_sen.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TEMP_sen_vhd_tst
+# -- Compiling architecture TEMP_sen_arch of TEMP_sen_vhd_tst
+# End time: 15:06:16 on May 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim/TEMP_sen.vht
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:07:24 on May 11,2022
+# vcom -reportprogress 300 -work work C:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim/TEMP_sen.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TEMP_sen_vhd_tst
+# -- Compiling architecture TEMP_sen_arch of TEMP_sen_vhd_tst
+# End time: 15:07:24 on May 11,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.temp_sen_vhd_tst(temp_sen_arch)
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 15:08:01 on May 11,2022, Elapsed time: 0:02:43
+# Errors: 0, Warnings: 0

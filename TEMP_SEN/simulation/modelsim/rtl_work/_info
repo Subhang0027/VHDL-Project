@@ -1,0 +1,340 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim
+Ebin8bcd
+Z1 w1651582969
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/intelFPGA_lite/18.1/TEMP_SEN/bin8bcd.vhd
+Z6 FC:/intelFPGA_lite/18.1/TEMP_SEN/bin8bcd.vhd
+l0
+L5
+VWlc;R2Kz4z5MPEcHDH7a=1
+!s100 Uf6B:Qi:0oIL`L52XH=JM2
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1652268603
+!i10b 1
+Z9 !s108 1652268603.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/18.1/TEMP_SEN/bin8bcd.vhd|
+Z11 !s107 C:/intelFPGA_lite/18.1/TEMP_SEN/bin8bcd.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Astruct
+R2
+R3
+R4
+DEx4 work 7 bin8bcd 0 22 Wlc;R2Kz4z5MPEcHDH7a=1
+l32
+L12
+VcP;>0Cf<_`9E<[94f1gOP0
+!s100 P6c_M=DP5KWzQ6ifi1Bk_3
+R7
+31
+!s110 1652268604
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eclock_divider
+Z14 w1652262213
+Z15 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z16 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R3
+R4
+R0
+Z17 8C:/intelFPGA_lite/18.1/TEMP_SEN/clock_divider.vhd
+Z18 FC:/intelFPGA_lite/18.1/TEMP_SEN/clock_divider.vhd
+l0
+L5
+VM;Q5z__kfj`1=O;Bj>4zY3
+!s100 4P]8PlbIC326<Nd5:]mZ42
+R7
+31
+R8
+!i10b 1
+R9
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/18.1/TEMP_SEN/clock_divider.vhd|
+Z20 !s107 C:/intelFPGA_lite/18.1/TEMP_SEN/clock_divider.vhd|
+!i113 1
+R12
+R13
+Artl
+R15
+R16
+R3
+R4
+DEx4 work 13 clock_divider 0 22 M;Q5z__kfj`1=O;Bj>4zY3
+l19
+L15
+VN32`X1lE;@0@lg9XR^YP00
+!s100 0g;[5Bmh4h1L:b72eSlhl2
+R7
+31
+R8
+!i10b 1
+R9
+R19
+R20
+!i113 1
+R12
+R13
+Eex_scl
+Z21 w1652265047
+R3
+R4
+R0
+Z22 8C:/intelFPGA_lite/18.1/TEMP_SEN/ex_scl.vhd
+Z23 FC:/intelFPGA_lite/18.1/TEMP_SEN/ex_scl.vhd
+l0
+L4
+VAXV6KFhe>dNC:oV<fAS]>1
+!s100 BT8nc[R2YTNc=UN9?fVB40
+R7
+31
+R8
+!i10b 1
+R9
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/18.1/TEMP_SEN/ex_scl.vhd|
+Z25 !s107 C:/intelFPGA_lite/18.1/TEMP_SEN/ex_scl.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+DEx4 work 6 ex_scl 0 22 AXV6KFhe>dNC:oV<fAS]>1
+l21
+L17
+VjG[UgKz[7JP1KzOBMEz3<0
+!s100 ^N<52GMV@?h_@^QA]jCUF2
+R7
+31
+R8
+!i10b 1
+R9
+R24
+R25
+!i113 1
+R12
+R13
+Ei2c_master
+Z26 w1652259589
+R15
+R16
+R3
+R4
+R0
+Z27 8C:/intelFPGA_lite/18.1/TEMP_SEN/I2C_MASTER.vhd
+Z28 FC:/intelFPGA_lite/18.1/TEMP_SEN/I2C_MASTER.vhd
+l0
+L5
+VE0bLd6O7A[5NeG6cNVeCb2
+!s100 0]SzIiL:KC=<bUP>JZ;FD2
+R7
+31
+R8
+!i10b 1
+R9
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/18.1/TEMP_SEN/I2C_MASTER.vhd|
+Z30 !s107 C:/intelFPGA_lite/18.1/TEMP_SEN/I2C_MASTER.vhd|
+!i113 1
+R12
+R13
+Abehave
+R15
+R16
+R3
+R4
+DEx4 work 10 i2c_master 0 22 E0bLd6O7A[5NeG6cNVeCb2
+l49
+L20
+VWaW^>^>Odb=mazY5zWgM`0
+!s100 [3c[=8fG7b[1`^Pj]lkd]0
+R7
+31
+R8
+!i10b 1
+R9
+R29
+R30
+!i113 1
+R12
+R13
+Elcd_module
+Z31 w1652253670
+R16
+R15
+R3
+R4
+R0
+Z32 8C:/intelFPGA_lite/18.1/TEMP_SEN/LCD_module.vhd
+Z33 FC:/intelFPGA_lite/18.1/TEMP_SEN/LCD_module.vhd
+l0
+L7
+V=4al_lD6ZIXV_j;XH7M_Z3
+!s100 mol@TG=gDFT7i1cbLH0U^0
+R7
+31
+R8
+!i10b 1
+R9
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/18.1/TEMP_SEN/LCD_module.vhd|
+Z35 !s107 C:/intelFPGA_lite/18.1/TEMP_SEN/LCD_module.vhd|
+!i113 1
+R12
+R13
+Abehave
+R16
+R15
+R3
+R4
+DEx4 work 10 lcd_module 0 22 =4al_lD6ZIXV_j;XH7M_Z3
+l41
+L35
+V1DEB[nQgDfD>]fUzo6CkU3
+!s100 QNCIYjJ6G@PX42[5hH]:^0
+R7
+31
+R8
+!i10b 1
+R9
+R34
+R35
+!i113 1
+R12
+R13
+Etemp_reg
+Z36 w1652204327
+R15
+R16
+R3
+R4
+R0
+Z37 8C:/intelFPGA_lite/18.1/TEMP_SEN/temp_reg.vhd
+Z38 FC:/intelFPGA_lite/18.1/TEMP_SEN/temp_reg.vhd
+l0
+L4
+VBMW7_Bo4W7EeSz9M@5D8D2
+!s100 7zBoB?naZe;]flkkTd3HN3
+R7
+31
+R8
+!i10b 1
+R9
+Z39 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/18.1/TEMP_SEN/temp_reg.vhd|
+Z40 !s107 C:/intelFPGA_lite/18.1/TEMP_SEN/temp_reg.vhd|
+!i113 1
+R12
+R13
+Abehave
+R15
+R16
+R3
+R4
+DEx4 work 8 temp_reg 0 22 BMW7_Bo4W7EeSz9M@5D8D2
+l15
+L13
+V_gJ]5kOhV_C[iI20IdCEh1
+!s100 o1GG3]2C6la<baMmKmVHo1
+R7
+31
+R8
+!i10b 1
+R9
+R39
+R40
+!i113 1
+R12
+R13
+Etemp_sen
+Z41 w1652260359
+R3
+R4
+R0
+Z42 8C:/intelFPGA_lite/18.1/TEMP_SEN/TEMP_sen.vhd
+Z43 FC:/intelFPGA_lite/18.1/TEMP_SEN/TEMP_sen.vhd
+l0
+L24
+V>?K5BdTR_3z>lUE?W]T>a3
+!s100 81GYFZ>1cnWNUAVQn9UYf1
+R7
+32
+Z44 !s110 1652273371
+!i10b 1
+Z45 !s108 1652273371.000000
+Z46 !s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/TEMP_SEN/TEMP_sen.vhd|
+Z47 !s107 C:/intelFPGA_lite/18.1/TEMP_SEN/TEMP_sen.vhd|
+!i113 1
+Z48 o-work work
+R13
+Abdf_type
+R3
+R4
+DEx4 work 8 temp_sen 0 22 >?K5BdTR_3z>lUE?W]T>a3
+l106
+L41
+VHVBC^alN2ff1Gh5jLNcda2
+!s100 QD:@N9fz2=O@K]:=G[5PP2
+R7
+32
+R44
+!i10b 1
+R45
+R46
+R47
+!i113 1
+R48
+R13
+Etemp_sen_vhd_tst
+Z49 w1652274441
+R3
+R4
+R0
+Z50 8C:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim/TEMP_sen.vht
+Z51 FC:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim/TEMP_sen.vht
+l0
+L30
+Vf33B><Y`A4=ljN523k?[H1
+!s100 iiWD`VUz69AIX>A]P=boG0
+R7
+32
+Z52 !s110 1652274444
+!i10b 1
+Z53 !s108 1652274444.000000
+Z54 !s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim/TEMP_sen.vht|
+Z55 !s107 C:/intelFPGA_lite/18.1/TEMP_SEN/simulation/modelsim/TEMP_sen.vht|
+!i113 1
+R48
+R13
+Atemp_sen_arch
+R3
+R4
+Z56 DEx4 work 16 temp_sen_vhd_tst 0 22 f33B><Y`A4=ljN523k?[H1
+l61
+L32
+VC8]GFe>ocf:LVk2EjN^DJ1
+!s100 1BlQP_A]WSAa4`3n8<`kE0
+R7
+32
+R52
+!i10b 1
+R53
+R54
+R55
+!i113 1
+R48
+R13
