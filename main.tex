@@ -1,0 +1,144 @@
+\documentclass[oneside,a4paper]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[table,dvipsnames]{xcolor}
+\usepackage{geometry}
+\geometry{a4paper,portrait,margin= 1.25in}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{comment}
+\usepackage{xspace}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{blindtext}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage{lmodern}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{amssymb}
+\usepackage[OHM]{unitsdef}
+\usepackage{fancyhdr}
+\usepackage{subcaption}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+\addbibresource{bibtex.bib}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{}
+
+\begin{document}
+\fancyfoot[C]{\thepage}
+\title{
+\centering
+ 
+\includegraphics[width=0.4\textwidth ]{img/uppsala_logo.png}\\Natural Computational Methods for Machine Learning\\[1em] \textbf{Question Generation using NLP Techniques and Pretrained Models}\\[3em]}
+
+\author{\textbf{Group 4}}
+\maketitle
+\begin{center}
+     \small{\href{mailto:akanksha.makkar.0073@student.uu.se}{\textsc{Akanksha Makkar}}}\\
+     \small{\href{mailto:megh.gala.xxxx@student.uu.se}{\textsc{Megh Gala}}}\\
+     \small{\href{mailto:paarth.sanhotra.3950@student.uu.se}{\textsc{Paarth Sanhotra}}}\\
+\end{center}
+\thispagestyle{empty}
+\newpage
+\tableofcontents
+
+\newpage
+\begin{abstract}
+    In this paper we use multiple techniques to generate questions using the SQuAD 2.0 dataset \cite{rajpurkar2016squad}. The questions are generated in different formats: simple question and answer, fill in the blanks, match the following and multiple choice questions. These questions can then be used for creating questionnaires which can have applications in several sectors.
+\end{abstract}
+\section{Introduction}
+     Question generation is the process of constructing questions from text automatically. The text might be as small as a single line or as large as a paragraph. A successful question generating model must take both syntax and semantics into account. The model must understand which parts of a text are central and make for interesting questions in addition to generating grammatically correct questions. As a result, question generation is linked to natural language comprehension and text summarization. Question generating is often overlooked by the question answering problem in Natural language processing (NLP). But question generation has some important use cases, one of them being the automated development of learning material. In this case, the question generator creates questions to determine whether or not the learner grasped a particular content. Another use case is, given a textual dataset, question generator can ask questions which actually highlights the important information in the context in the form of answers. 
+     
+\section{Background}
+In order to achieve this, an understanding of the following models is necessary:
+     \begin{enumerate}
+         \item Recurrent Neural Network(RNN): RNNs are a type of neural network that is useful for modeling sequence data. They are derived from feedforward networks, but recurrent neural networks can also anticipate sequential data in a way that other algorithms can't.
+         \item Long Short-Term Memory (LSTM): LSTM networks are an extension of RNN that extend the memory. The layers of an RNN are built using LSTM as the building blocks. LSTMs assign "weights" to data, allowing RNNs to either let new information in, forget it, or give it enough relevance to affect the output.
+         \item Transformers: A transformer is a deep learning model for natural language processing that eliminates RNN's drawbacks. Transformers allows you to run input sequences in parallel, which speeds up training and provides a variety of other benefits. It also employs "attention mechanisms" that allow it to track word relationships throughout extremely long text sequences.  
+     \end{enumerate}
+     Stanford Question Answering Dataset (SQuAD) is a reading comprehension dataset, consisting of questions posed by crowdworkers on a set of Wikipedia articles, where the answer to every question is a segment of text, or span, from the corresponding reading passage, or the question might be unanswerable.
+
+\section{Related Work}
+Discuss about the papers, a brief intro to the algorithms used and why they are suitable for this task
+
+\section{Methodology}
+\subsection{Question Generation using Recursive Neural Network}
+\subsubsection{Structure}
+Recursive neural network is an extension to Feed Forward Neural Network where the network has a memory feature and retains the results of the epoch at time t - 1. It is enabled by the neural network being executed at the current epoch taking in the output from the previous epoch. This enables the network to retain memory and train accordingly. Due to the memory feature, RNN can be useful in Time Series use cases, Language Translations, etc.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\textwidth]{img/RNN architecture.png}
+    \caption{A typical RNN architecture.}
+    \label{fig:rnn}
+\end{figure}
+
+When the recursive network grows, during backpropogation, delta W for the first few layers tends to  zero or infinity depending on the value of the Weights and the derivative of the loss function. This is the \textbf{Vanishing Gradient} or the \textbf{Exploding Gradient Problem}. To tackle this issue, Long Short Term Memory Neural Network is used. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\textwidth]{img/LSTM Architecture.png}
+    \caption{A typical LSTM architecture.}
+    \label{fig:rnn}
+\end{figure}
+
+The modification applied to the LSTM compared to the vanilla RNN is that along with the previous epoch's output, the previous cell state is also added as an input. A typical LSTM cell contains 5 elements: 1) A simple RNN cell, 2) Previous Cell's State, 3) Forget Gates, 4) Input Gates, 5) Output Gate. The Gates are used to determine if the cell is updated (Input Gate), should the memory be set to zero (Forget Gate) and if the output information of the current cell should be visible to the next cell, controlled by the Output Gate.
+
+\subsubsection{Implementation Details}
+For implementation of Question Generation using RNN, we pre-process the SQuAD 2.0 dataset. The SQuAD dataset consists of 7 questions for every context present in it. The first step is to change the characters in the dataset to characters which are recognized by python. Characters like \'e or \"o are converted into UTF-8 numbers while training which might make the model lose accuracy. The next step is converting the data which is in the JSON format to dataframes which would help us in pre-processing the data before feeding it to the LSTM function provided to us by the TensorFlow library. Before passing it to the functions, we tokenize it. The question and context are concatenated into a token which is separated by a separating token. Then, we convert the tokenized input into vectors and input it into the function. In the LSTM function called, the forget gate is used to eliminate the articles and words which are not essential to grasp the meaning of the text being analysed.
+
+\subsubsection{Results}
+\subsection{Question Generation Problem solved using T5 and BART model}
+The T5 transformer is an upgraded version of the basic transformer described in section 2. T5, or Text-to-Text Transfer Transformer, is a text-to-text method Transformer-based architecture. Every task is framed as feeding the model text as input and training it to output some goal text, which includes translation, question answering, and classification. This allows us to use the same model, loss function, hyper-parameters, and other parameters across a diverse set of tasks.
+\subsubsection{Structure}
+\subsubsection{Results}                                                     
+
+
+\subsection{Question Generation Problem solved using QuestGen}
+\subsubsection{Intuition}
+After having trained a model using T5 for the Question Generation task on the SQUAD dataset, we decided to progress with analysing and experimenting with varying outcomes of the same task. So far, the task was primarily focused on generation reading comprehension type questions. However, in order to be able to comply with the goal to generate questions in order to have a more nuanced self assessment of the text read or studied, varying question types would prove to be conducive in truly assessing one's understanding. After further research and literature survey in regard to this, we came across a pretrained NLP library that could be used for such a task.
+\subsubsection{Structure}
+QuestGen is an OpenSource library in Python for Question Generation using a variety of combination of NLP techniques. This was created with the goal of being able to help school teachers set up assessment and worksheets for students in the time of online school during Covid-19. This model is able to paraphrase questions to answer different question types with the same answer. Some categories include: Multiple Choice Questions, Boolean (yes/no) question and FAQ type questions.
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=4cm]{cap_qugen.png}
+    \caption{Capabilities of QuestGen library}
+    \label{capabilities_qugen}
+\end{figure}
+\\
+Each of these are constructed using different variants of the HuggingFace community.
+\subsubsection{Multiple Choice Questions}
+These type of questions are generated using a 5 step NLP approach using the T5 model and the Wordnet generator. 
+\\
+\begin{enumerate}
+  \item The model first uses a T5 transformer and taking the article as input, it summarises it using a Extractive Approach. The summary is intended to be able to identify more crucial aspects of the text for the model to focus on. 
+  \item The summarizing approach taken earlier will determine whether or not the need for paraphrasing is needed, which could again be done using the sentence transformer model - distilroberta model, a huggingface implementation.
+  \item The keyword/keyphrase extraction is the next step to identify the mian focus of the excerpt in the context. The multipartite keyword extraction algorithm is used for this approach and is able to identify crucial words or phrases which can be used to frame the questions, based on the task.
+  \item Finally, the context is used to generate both the question and the answer. The answer is separated from the context using separators or highlighting mechanism. This question is finally generated using the T5 model.
+  \item Once the question is generated, the distractors or the options for the multi-choice question are required. One amongst these is the correct answer and the rest are incorrect choices. The word vector algorithm of sense2vec of the Wordnet generator are used.
+\end{enumerate}
+
+\subsubsection{Boolean Questions}
+
+\subsubsection{Match the Categories}
+
+\subsection{Implementation and Network Architecture}
+
+\subsection{Results}
+
+\section{Discussion}
+Why Variational Auto-Encoders or GANs did not seem ideal for usage here.
+Final analysis and comparison of models.
+
+\section{Conclusion}
+In this study, we examine models based on BERT models that create a question given an input context (sentence or paragraph) and the intended answer. Our models are transformers that can effectively handle long-term dependencies. In terms of conventional NLG measures (BLEU, ROUGE, METEOR) and whether a standard QA model can correctly answer the generated questions, the best model exceeds previous RNN-based state-of-the-arts.
+
+\end{document}
